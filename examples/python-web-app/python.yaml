@@ -1,0 +1,23 @@
+kind: Deployment
+apiServer: apps/v1
+metadata:
+   name: deployment
+   laebls:
+       app: deployment
+spec:
+   replicas: 4
+   selector:
+     matchLabels:
+         app: deployment
+   template:
+       metadata:
+             name: deppod
+             labels:
+                app: deployment
+       spec:
+          containers:
+            - name: testc
+              image: nirmaldocker1987/pythonproject
+              ports:
+                - containerPort: 80
+             
