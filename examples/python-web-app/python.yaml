@@ -19,5 +19,5 @@ spec:
             - name: testc
               image: nirmaldocker1987/pythonproject
               ports:
-                - containerPort: 80
+                - containerPort: 8000
              
